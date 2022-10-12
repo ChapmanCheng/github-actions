@@ -23,7 +23,7 @@ jobs:
         with: 
           path: node_modules
           key: node_modules-key
-      - run: npm test
+#       - run: npm test
 
   publish-gpr:
     needs: build
