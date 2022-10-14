@@ -11,9 +11,9 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
+    # permissions:
+    #   contents: read
+    #   packages: write
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -21,6 +21,8 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
+        env:
+          GITHUB_PACKAGE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - run: ls -la .
       - run: npm publish
         env:
