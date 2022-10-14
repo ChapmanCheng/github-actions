@@ -1,5 +1,5 @@
 {
-  "name": "github-actions",
+  "name": "@chapman-cc/github-actions",
   "version": "1.0.0",
   "description": "",
   "main": "lib/index",
